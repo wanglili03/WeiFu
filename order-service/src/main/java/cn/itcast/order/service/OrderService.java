@@ -21,7 +21,7 @@ public class OrderService {
         //2、远程查询user
         //url
         String url="http://userservice/user/"+order.getUserId();
-        //发起调用
+        //发起调用 返回请求的数据
         User user = restTemplate.getForObject(url, User.class);
         //存入order
         order.setUser(user);
